@@ -1,0 +1,15 @@
+<apex:page showHeader="false" sidebar="false">
+    
+    <apex:includeLightning />
+    <apex:slds />
+    <div id="weatherId" />
+    <script>
+    $Lightning.use("c:OpenWeatherApp", function(){
+        $Lightning.createComponent("c:Weather",
+                                   {},
+                                   "weatherId",
+                                   function(cmp){});
+    });
+    </script>
+    
+</apex:page>
